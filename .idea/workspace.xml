@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f8c7b86-9893-4525-8318-fca819b3bb6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/appointment/AppointmentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/appointment/CreateAppointmentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/appointment/MedicalRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/appointment/OwnerNameDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/model/AppointmentState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/model/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/model/BaseRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/model/NamedEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/model/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/owner/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/owner/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/owner/PetType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/owner/Visit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/vet/Specialty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/vet/Vet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/entity/vet/Vets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/controller/OrchestrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/controller/OrchestrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/service/SuccessActionAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/service/SuccessActionAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="2f8c7b86-9893-4525-8318-fca819b3bb6f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719291659975</updated>
-      <workItem from="1719291661079" duration="735000" />
+      <workItem from="1719291661079" duration="780000" />
     </task>
     <servers />
   </component>
