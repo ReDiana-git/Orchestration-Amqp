@@ -16,7 +16,7 @@
 package nl.nl0e0.consultationamqp.entity.owner;
 
 import jakarta.persistence.*;
-import nl.nl0e0.appointmentamqp.entity.model.NamedEntity;
+import nl.nl0e0.consultationamqp.entity.model.NamedEntity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;

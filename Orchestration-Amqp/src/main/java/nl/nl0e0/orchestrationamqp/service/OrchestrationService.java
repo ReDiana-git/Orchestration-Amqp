@@ -31,4 +31,8 @@ public class OrchestrationService {
         amqpSender.createMedicalRecord(medicalRecord);
         return medicalRecord;
     }
+
+    public void deleteAll() {
+        amqpSender.deleteAll();
+    }
 }

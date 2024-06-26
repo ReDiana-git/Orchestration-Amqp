@@ -1,4 +1,5 @@
-package nl.nl0e0.orchestrationamqp.entity.appointment;
+package nl.nl0e0.orchestrationamqp.entity;
+
 
 import lombok.Getter;
 import lombok.Setter;

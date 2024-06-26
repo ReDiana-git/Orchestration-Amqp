@@ -18,7 +18,7 @@ package nl.nl0e0.consultationamqp.entity.owner;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
-import nl.nl0e0.appointmentamqp.entity.model.Person;
+import nl.nl0e0.consultationamqp.entity.model.Person;
 import org.springframework.core.style.ToStringCreator;
 import org.springframework.util.Assert;
 

@@ -19,7 +19,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import nl.nl0e0.appointmentamqp.entity.model.BaseEntity;
+import nl.nl0e0.consultationamqp.entity.model.BaseEntity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;

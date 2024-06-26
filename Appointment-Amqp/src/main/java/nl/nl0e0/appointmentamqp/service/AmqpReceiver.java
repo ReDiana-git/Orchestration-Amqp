@@ -13,7 +13,13 @@ public class AmqpReceiver {
     AppointmentService appointmentService;
 
     @RabbitListener(queues = "createAppointmentQueue")
-    public void createConsultationReceiver(String id){
-        appointmentService.createAppointment(id);
+    public void createAppointment(MedicalRecord medicalRecord){
+        appointmentService.createAppointment(medicalRecord);
+    }
+
+    @RabbitListener(queues = "deleteAppointmentQueue")
+    public void deleteAppointment(String string){
+        if(string.equals("delete"))
+            appointmentService.deleteAll();
     }
 }

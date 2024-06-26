@@ -1,5 +1,6 @@
 package nl.nl0e0.orchestrationamqp.controller;
 
+import nl.nl0e0.orchestrationamqp.entity.OwnerNameDTO;
 import nl.nl0e0.orchestrationamqp.entity.appointment.CreateAppointmentDTO;
 import nl.nl0e0.orchestrationamqp.entity.appointment.MedicalRecord;
 import nl.nl0e0.orchestrationamqp.service.OrchestrationService;
@@ -15,13 +16,14 @@ import reactor.core.publisher.Mono;
 
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
 @CrossOrigin
 public class OrchestrationController {
     @Autowired
-    OrchestrationService appointmentService;
+    OrchestrationService orchestrationService;
     SuccessActionAlert successActionAlert = new SuccessActionAlert();
 
 
@@ -30,8 +32,8 @@ public class OrchestrationController {
     public ResponseEntity<?> createAppointment(@RequestBody CreateAppointmentDTO createAppointMentDTO){
 
         try{
-            appointmentService.checkCreateAppointmentDTOValidation(createAppointMentDTO);
-            MedicalRecord medicalRecord = appointmentService.createAppointment(createAppointMentDTO);
+            orchestrationService.checkCreateAppointmentDTOValidation(createAppointMentDTO);
+            MedicalRecord medicalRecord = orchestrationService.createAppointment(createAppointMentDTO);
             successActionAlert.createAppointmentAlert(medicalRecord);
             return ResponseEntity.status(HttpStatus.CREATED).body(medicalRecord);
         }catch (Exception exception){
@@ -47,8 +49,8 @@ public class OrchestrationController {
     @PostMapping("/appointment/createAppointments")
     public Mono<ResponseEntity<MedicalRecord>> createAppointments(@RequestBody CreateAppointmentDTO createAppointMentDTO){
         try{
-            appointmentService.checkCreateAppointmentDTOValidation(createAppointMentDTO);
-            MedicalRecord medicalRecord = appointmentService.createAppointment(createAppointMentDTO);
+            orchestrationService.checkCreateAppointmentDTOValidation(createAppointMentDTO);
+            MedicalRecord medicalRecord = orchestrationService.createAppointment(createAppointMentDTO);
             successActionAlert.createAppointmentAlert(medicalRecord);
             return Mono.create(responseEntityMonoSink -> {
                 responseEntityMonoSink.success(ResponseEntity.status(HttpStatus.CREATED).body(medicalRecord));
@@ -64,7 +66,16 @@ public class OrchestrationController {
                 responseEntityMonoSink.error(exception);
             });
         }
-
     }
-
+    @PostMapping("/delete")
+    public ResponseEntity<?> deleteAll(){
+        orchestrationService.deleteAll();
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
+    @PostMapping("/appointment/getAppointments")
+    public ResponseEntity<?> getAppointmentByOwnerName(@RequestBody OwnerNameDTO ownerNameDTO){
+//		appointmentService.checkValid(ownerNameDTO);
+        List<?> appointmentEntities = appointmentService.getAppointmentsByOwnerName(ownerNameDTO);
+        return ResponseEntity.status(HttpStatus.OK).body(appointmentEntities);
+    }
 }

@@ -33,7 +33,7 @@ public class AppointmentEntity {
     public AppointmentEntity(){
 
     }
-    public AppointmentEntity(String id){
-        this.id = id;
+    public AppointmentEntity(MedicalRecord medicalRecord){
+        this.id = medicalRecord.getAppointmentId();
     }
 }

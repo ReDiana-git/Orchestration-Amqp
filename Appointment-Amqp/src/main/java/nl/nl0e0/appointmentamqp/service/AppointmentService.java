@@ -13,7 +13,11 @@ import java.time.LocalDateTime;
 public class AppointmentService {
     @Autowired
     AppointmentRepository appointmentRepository;
-    public void createAppointment(String id) {
-        appointmentRepository.save(new AppointmentEntity(id));
+    public void createAppointment(MedicalRecord medicalRecord) {
+        appointmentRepository.save(new AppointmentEntity(medicalRecord));
+    }
+
+    public void deleteAll() {
+        appointmentRepository.deleteAll();
     }
 }

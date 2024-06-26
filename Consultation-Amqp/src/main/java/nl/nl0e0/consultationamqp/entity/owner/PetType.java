@@ -17,7 +17,7 @@ package nl.nl0e0.consultationamqp.entity.owner;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import nl.nl0e0.appointmentamqp.entity.model.NamedEntity;
+import nl.nl0e0.consultationamqp.entity.model.NamedEntity;
 
 
 /**

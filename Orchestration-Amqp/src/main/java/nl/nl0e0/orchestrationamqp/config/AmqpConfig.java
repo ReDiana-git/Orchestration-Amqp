@@ -85,9 +85,86 @@ public class AmqpConfig {
                 .with("createAppointment")
                 .noargs();
     }
+    @Bean
+    public Queue deleteAppointmentQueue() {
+        return new Queue("deleteAppointmentQueue", false);
+    }
 
+    @Bean
+    public Exchange deleteAppointmentExchange()
+    {
+        return new DirectExchange("deleteAppointmentExchange");
+    }
+
+    @Bean
+    public Binding bindingDeleteAppointmentRecord(Queue deleteAppointmentQueue, Exchange deleteAppointmentExchange)
+    {
+        return BindingBuilder.bind(deleteAppointmentQueue)
+                .to(deleteAppointmentExchange)
+                .with("deleteAppointment")
+                .noargs();
+    }
+
+    @Bean
+    public Queue deleteMedicineQueue() {
+        return new Queue("deleteMedicineQueue", false);
+    }
+
+    @Bean
+    public Exchange deleteMedicineExchange()
+    {
+        return new DirectExchange("deleteMedicineExchange");
+    }
+
+    @Bean
+    public Binding bindingDeleteMedicine(Queue deleteMedicineQueue, Exchange deleteMedicineExchange)
+    {
+        return BindingBuilder.bind(deleteMedicineQueue)
+                .to(deleteMedicineExchange)
+                .with("deleteMedicine")
+                .noargs();
+    }
+    @Bean
+    public Queue deletePaymentQueue() {
+        return new Queue("deletePaymentQueue", false);
+    }
+
+    @Bean
+    public Exchange deletePaymentExchange()
+    {
+        return new DirectExchange("deletePaymentExchange");
+    }
+
+    @Bean
+    public Binding bindingDeletePayment(Queue deletePaymentQueue, Exchange deletePaymentExchange)
+    {
+        return BindingBuilder.bind(deletePaymentQueue)
+                .to(deletePaymentExchange)
+                .with("deletePayment")
+                .noargs();
+    }
+    @Bean
+    public Queue deleteConsultationQueue() {
+        return new Queue("deleteConsultationQueue", false);
+    }
+
+    @Bean
+    public Exchange deleteConsultationExchange()
+    {
+        return new DirectExchange("deleteConsultationExchange");
+    }
+
+    @Bean
+    public Binding bindingDeleteConsultation(Queue deleteConsultationQueue, Exchange deleteConsultationExchange)
+    {
+        return BindingBuilder.bind(deleteConsultationQueue)
+                .to(deleteConsultationExchange)
+                .with("deleteConsultation")
+                .noargs();
+    }
     @Bean
     public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
         return new Jackson2JsonMessageConverter();
     }
+
 }

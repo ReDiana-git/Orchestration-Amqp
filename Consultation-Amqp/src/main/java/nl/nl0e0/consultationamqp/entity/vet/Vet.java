@@ -17,7 +17,7 @@ package nl.nl0e0.consultationamqp.entity.vet;
 
 import jakarta.persistence.*;
 import jakarta.xml.bind.annotation.XmlElement;
-import nl.nl0e0.appointmentamqp.entity.model.Person;
+import nl.nl0e0.consultationamqp.entity.model.Person;
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 
