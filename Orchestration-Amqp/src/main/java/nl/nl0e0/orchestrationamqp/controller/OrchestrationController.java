@@ -74,8 +74,7 @@ public class OrchestrationController {
     }
     @PostMapping("/appointment/getAppointments")
     public ResponseEntity<?> getAppointmentByOwnerName(@RequestBody OwnerNameDTO ownerNameDTO){
-//		appointmentService.checkValid(ownerNameDTO);
-        List<?> appointmentEntities = appointmentService.getAppointmentsByOwnerName(ownerNameDTO);
-        return ResponseEntity.status(HttpStatus.OK).body(appointmentEntities);
+        orchestrationService.getAppointmentsByOwnerName(ownerNameDTO);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 }

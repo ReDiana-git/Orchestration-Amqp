@@ -6,6 +6,8 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class AmqpSender {
     @Autowired
@@ -22,5 +24,9 @@ public class AmqpSender {
         template.convertAndSend("deletePaymentExchange", "deletePayment", "delete");
         template.convertAndSend("deleteConsultationExchange", "deleteConsultation", "delete");
         template.convertAndSend("deleteMedicineExchange", "deleteMedicine", "delete");
+    }
+
+    public void findByOwnerId(Integer id) {
+        template.convertAndSend("getIdByOwnerExchange", "getIdByOwner", id);
     }
 }

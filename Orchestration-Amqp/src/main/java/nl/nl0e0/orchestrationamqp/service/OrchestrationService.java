@@ -1,10 +1,15 @@
 package nl.nl0e0.orchestrationamqp.service;
 
+import nl.nl0e0.orchestrationamqp.entity.OwnerNameDTO;
 import nl.nl0e0.orchestrationamqp.entity.appointment.CreateAppointmentDTO;
 import nl.nl0e0.orchestrationamqp.entity.appointment.MedicalRecord;
+import nl.nl0e0.orchestrationamqp.entity.owner.Owner;
 import nl.nl0e0.orchestrationamqp.repository.MedicalRecordRepository;
+import nl.nl0e0.orchestrationamqp.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class OrchestrationService {
@@ -12,6 +17,8 @@ public class OrchestrationService {
     AmqpSender amqpSender;
     @Autowired
     MedicalRecordRepository medicalRecordRepository;
+    @Autowired
+    OwnerRepository ownerRepository;
 
     public void checkCreateAppointmentDTOValidation(CreateAppointmentDTO createAppointMentDTO) {
         String notBeNull = " should not be null.";
@@ -34,5 +41,10 @@ public class OrchestrationService {
 
     public void deleteAll() {
         amqpSender.deleteAll();
+    }
+
+    public void getAppointmentsByOwnerName(OwnerNameDTO ownerNameDTO) {
+        Owner owner = ownerRepository.findByFullName(ownerNameDTO.getFirstName(), ownerNameDTO.getLastName());
+        amqpSender.findByOwnerId(owner.getId());
     }
 }
