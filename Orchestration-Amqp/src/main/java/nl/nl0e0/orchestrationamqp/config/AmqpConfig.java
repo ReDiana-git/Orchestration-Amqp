@@ -163,6 +163,44 @@ public class AmqpConfig {
                 .noargs();
     }
     @Bean
+    public Queue returnMedicalRecordQueue() {
+        return new Queue("returnMedicalRecordQueue", false);
+    }
+
+    @Bean
+    public Exchange returnMedicalRecordExchange()
+    {
+        return new DirectExchange("returnMedicalRecordExchange");
+    }
+
+    @Bean
+    public Binding bindingReturnMedicalRecord(Queue returnMedicalRecordQueue, Exchange returnMedicalRecordExchange)
+    {
+        return BindingBuilder.bind(returnMedicalRecordQueue)
+                .to(returnMedicalRecordExchange)
+                .with("returnMedicalRecord")
+                .noargs();
+    }
+    @Bean
+    public Queue returnMedicalRecordsQueue() {
+        return new Queue("returnMedicalRecordsQueue", false);
+    }
+
+    @Bean
+    public Exchange returnMedicalRecordsExchange()
+    {
+        return new DirectExchange("returnMedicalRecordsExchange");
+    }
+
+    @Bean
+    public Binding bindingReturnMedicalRecords(Queue returnMedicalRecordsQueue, Exchange returnMedicalRecordsExchange)
+    {
+        return BindingBuilder.bind(returnMedicalRecordsQueue)
+                .to(returnMedicalRecordsExchange)
+                .with("returnMedicalRecords")
+                .noargs();
+    }
+    @Bean
     public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
         return new Jackson2JsonMessageConverter();
     }

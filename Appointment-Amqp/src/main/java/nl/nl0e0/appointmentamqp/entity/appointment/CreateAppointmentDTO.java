@@ -3,11 +3,13 @@ package nl.nl0e0.appointmentamqp.entity.appointment;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class CreateAppointmentDTO {
+public class CreateAppointmentDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private Integer ownerId;
 	private Integer petId;
 	private Integer vetId;

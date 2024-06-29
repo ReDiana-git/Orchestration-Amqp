@@ -28,14 +28,13 @@ public class OrchestrationController {
 
 
     // 建立新的預約單號
-    @PostMapping("/appointment/createAppointment")
+    @PostMapping("/appointment/createAppointments")
     public ResponseEntity<?> createAppointment(@RequestBody CreateAppointmentDTO createAppointMentDTO){
 
         try{
             orchestrationService.checkCreateAppointmentDTOValidation(createAppointMentDTO);
-            MedicalRecord medicalRecord = orchestrationService.createAppointment(createAppointMentDTO);
-            successActionAlert.createAppointmentAlert(medicalRecord);
-            return ResponseEntity.status(HttpStatus.CREATED).body(medicalRecord);
+            orchestrationService.createAppointment(createAppointMentDTO);
+            return ResponseEntity.status(HttpStatus.CREATED).build();
         }catch (Exception exception){
             Map<String, Object> body = new LinkedHashMap<>();
             body.put("timestamp", LocalDateTime.now());
@@ -46,27 +45,6 @@ public class OrchestrationController {
         }
     }
 
-    @PostMapping("/appointment/createAppointments")
-    public Mono<ResponseEntity<MedicalRecord>> createAppointments(@RequestBody CreateAppointmentDTO createAppointMentDTO){
-        try{
-            orchestrationService.checkCreateAppointmentDTOValidation(createAppointMentDTO);
-            MedicalRecord medicalRecord = orchestrationService.createAppointment(createAppointMentDTO);
-            successActionAlert.createAppointmentAlert(medicalRecord);
-            return Mono.create(responseEntityMonoSink -> {
-                responseEntityMonoSink.success(ResponseEntity.status(HttpStatus.CREATED).body(medicalRecord));
-            });
-        }catch (Exception exception){
-            Map<String, Object> body = new LinkedHashMap<>();
-            body.put("timestamp", LocalDateTime.now());
-            body.put("message", exception.getMessage());
-
-            // 返回包含自定義錯誤訊息和HTTP狀態碼的ResponseEntity
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);
-            return Mono.create(responseEntityMonoSink -> {
-                responseEntityMonoSink.error(exception);
-            });
-        }
-    }
     @PostMapping("/delete")
     public ResponseEntity<?> deleteAll(){
         orchestrationService.deleteAll();
