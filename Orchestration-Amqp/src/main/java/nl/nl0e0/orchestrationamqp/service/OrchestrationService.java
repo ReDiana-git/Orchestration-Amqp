@@ -1,12 +1,17 @@
 package nl.nl0e0.orchestrationamqp.service;
 
-import nl.nl0e0.orchestrationamqp.entity.OwnerNameDTO;
-import nl.nl0e0.orchestrationamqp.entity.appointment.CreateAppointmentDTO;
-import nl.nl0e0.orchestrationamqp.entity.appointment.MedicalRecord;
-import nl.nl0e0.orchestrationamqp.entity.owner.Owner;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import nl.nl0e0.petclinicentity.consultation.UpdateConsultationDTO;
+import nl.nl0e0.petclinicentity.owner.OwnerNameDTO;
+import nl.nl0e0.petclinicentity.appointment.CreateAppointmentDTO;
+import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.owner.Owner;
 import nl.nl0e0.orchestrationamqp.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class OrchestrationService {
@@ -14,6 +19,9 @@ public class OrchestrationService {
     AmqpSender amqpSender;
     @Autowired
     OwnerRepository ownerRepository;
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
+    ObjectMapper objectMapper = new ObjectMapper();
 
     public void checkCreateAppointmentDTOValidation(CreateAppointmentDTO createAppointMentDTO) {
         String notBeNull = " should not be null.";
@@ -42,5 +50,19 @@ public class OrchestrationService {
         amqpSender.findByOwnerId(owner.getId());
     }
 
+
+    public void saveReturnMedicalRecords(List<MedicalRecord> medicalRecords) {
+        redisTemplate.opsForValue().set(medicalRecords.get(0).getOwnerId().toString(), medicalRecords);
+        System.out.println("Store data to Redis success.");
+    }
+
+    public List<MedicalRecord> reGetAppointmentsByOwnerName(OwnerNameDTO ownerNameDTO) {
+        Owner owner = ownerRepository.findByFullName(ownerNameDTO.getFirstName(), ownerNameDTO.getLastName());
+        List<MedicalRecord> medicalRecords = (List<MedicalRecord>) redisTemplate.opsForValue().getAndDelete(owner.getId().toString());
+        for(MedicalRecord medicalRecord: medicalRecords){
+            System.out.println(medicalRecord);
+        }
+        return medicalRecords;
+    }
 
 }

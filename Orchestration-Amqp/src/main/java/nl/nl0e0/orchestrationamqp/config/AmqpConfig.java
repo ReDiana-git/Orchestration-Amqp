@@ -68,13 +68,13 @@ public class AmqpConfig {
 
     @Bean
     public Queue createAppointmentQueue() {
-        return new Queue("createAppointmentQueue", false);
+        return new Queue("createAppointment", false);
     }
 
     @Bean
     public Exchange createAppointmentExchange()
     {
-        return new DirectExchange("createAppointmentExchange");
+        return new DirectExchange("createAppointment");
     }
 
     @Bean
@@ -200,6 +200,27 @@ public class AmqpConfig {
                 .with("returnMedicalRecords")
                 .noargs();
     }
+
+    @Bean
+    public Queue getIdByOwnerQueue() {
+        return new Queue("getIdByOwnerQueue", false);
+    }
+
+    @Bean
+    public Exchange getIdByOwnerExchange()
+    {
+        return new DirectExchange("getIdByOwnerExchange");
+    }
+
+    @Bean
+    public Binding bindingGetIdByOwnerQueue(Queue getIdByOwnerQueue, Exchange getIdByOwnerExchange)
+    {
+        return BindingBuilder.bind(getIdByOwnerQueue)
+                .to(getIdByOwnerExchange)
+                .with("getIdByOwner")
+                .noargs();
+    }
+
     @Bean
     public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
         return new Jackson2JsonMessageConverter();

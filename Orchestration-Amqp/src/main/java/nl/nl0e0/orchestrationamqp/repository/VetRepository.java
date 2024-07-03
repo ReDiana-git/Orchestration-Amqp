@@ -15,7 +15,7 @@
  */
 package nl.nl0e0.orchestrationamqp.repository;
 
-import nl.nl0e0.orchestrationamqp.entity.vet.Vet;
+import nl.nl0e0.petclinicentity.vet.Vet;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Page;

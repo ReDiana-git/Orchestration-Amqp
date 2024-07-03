@@ -1,0 +1,36 @@
+---
+request: null
+response: null
+input:
+  triggeredBy: "trigger()"
+  assertThat: null
+outputMessage:
+  sentTo: "createAppointment"
+  headers:
+    amqp_receivedRoutingKey: "createAppointment"
+  body:
+    ownerId: 1
+    petId: 2
+    vetId: 1
+    appointmentDate: "UGLWQNCMYDBKIPUYLSFT"
+  bodyFromFile: null
+  bodyFromFileAsBytes: null
+  assertThat: null
+  matchers:
+    body:
+    - path: "$.['appointmentDate']"
+      type: "by_regex"
+      value: "^\\s*\\S[\\S\\s]*"
+      minOccurrence: null
+      maxOccurrence: null
+      predefined: null
+      regexType: "as_string"
+    headers: []
+    cookies: []
+description: "should send a message when event occurs"
+label: "event_occurred"
+name: "contract"
+priority: null
+ignored: false
+inProgress: false
+metadata: {}

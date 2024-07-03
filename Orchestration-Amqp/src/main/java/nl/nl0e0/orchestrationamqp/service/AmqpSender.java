@@ -1,7 +1,7 @@
 package nl.nl0e0.orchestrationamqp.service;
 
-import nl.nl0e0.orchestrationamqp.entity.appointment.CreateAppointmentDTO;
-import nl.nl0e0.orchestrationamqp.entity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.appointment.CreateAppointmentDTO;
+import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ public class AmqpSender {
     @Autowired
     private RabbitTemplate template;
     public void createMedicalRecord(CreateAppointmentDTO createAppointMentDTO) {
-        template.convertAndSend("createAppointmentExchange", "createAppointment", createAppointMentDTO);
+        template.convertAndSend("createAppointment", "createAppointment", createAppointMentDTO);
     }
     public void createPCM(MedicalRecord medicalRecord) {
         template.convertAndSend("createPaymentExchange", "createPayment", medicalRecord);
@@ -29,6 +29,7 @@ public class AmqpSender {
     }
 
     public void findByOwnerId(Integer id) {
+        System.out.println("Send data to getIdByOwnerExchange.");
         template.convertAndSend("getIdByOwnerExchange", "getIdByOwner", id);
     }
 }

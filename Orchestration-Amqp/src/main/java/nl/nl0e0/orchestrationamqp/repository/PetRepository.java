@@ -1,7 +1,7 @@
 package nl.nl0e0.orchestrationamqp.repository;
 
 
-import nl.nl0e0.orchestrationamqp.entity.owner.Pet;
+import nl.nl0e0.petclinicentity.owner.Pet;
 import org.springframework.data.repository.Repository;
 
 

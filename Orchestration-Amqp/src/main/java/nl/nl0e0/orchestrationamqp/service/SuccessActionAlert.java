@@ -1,6 +1,6 @@
 package nl.nl0e0.orchestrationamqp.service;
 
-import nl.nl0e0.orchestrationamqp.entity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
 
 public class SuccessActionAlert {
     public void createAppointmentAlert(MedicalRecord medicalRecord){

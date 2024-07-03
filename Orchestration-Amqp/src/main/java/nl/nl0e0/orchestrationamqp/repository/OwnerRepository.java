@@ -17,8 +17,8 @@ package nl.nl0e0.orchestrationamqp.repository;
 
 
 
-import nl.nl0e0.orchestrationamqp.entity.owner.Owner;
-import nl.nl0e0.orchestrationamqp.entity.owner.PetType;
+import nl.nl0e0.petclinicentity.owner.Owner;
+import nl.nl0e0.petclinicentity.owner.PetType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
