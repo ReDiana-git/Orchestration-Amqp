@@ -1,6 +1,6 @@
 package nl.nl0e0.appointmentamqp.repositroy;
 
-import nl.nl0e0.appointmentamqp.entity.appointment.AppointmentEntity;
+import nl.nl0e0.petclinicentity.appointment.AppointmentEntity;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;

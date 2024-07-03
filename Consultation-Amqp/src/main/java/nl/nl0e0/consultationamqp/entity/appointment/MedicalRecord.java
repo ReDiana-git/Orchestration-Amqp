@@ -1,4 +1,4 @@
-package nl.nl0e0.consultationamqp.entity.appointment;
+package nl.nl0e0.petclinicentity.appointment;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

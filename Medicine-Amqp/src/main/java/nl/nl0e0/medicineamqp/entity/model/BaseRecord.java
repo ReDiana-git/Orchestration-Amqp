@@ -1,4 +1,4 @@
-package nl.nl0e0.medicineamqp.entity.model;
+package nl.nl0e0.petclinicentity.model;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,7 +1,7 @@
 package nl.nl0e0.medicineamqp.repository;
 
 import jakarta.transaction.Transactional;
-import nl.nl0e0.medicineamqp.entity.medicine.MedicineEntity;
+import nl.nl0e0.petclinicentity.medicine.MedicineEntity;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;

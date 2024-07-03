@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nl.nl0e0.medicineamqp.entity.model;
+package nl.nl0e0.petclinicentity.model;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

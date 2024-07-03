@@ -12,6 +12,7 @@
         <module name="Appointment-Amqp" />
         <module name="Consultation-Amqp" />
         <module name="Payment-Amqp" />
+        <module name="Petclinic-Entity" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
       <module name="Consultation-Amqp" options="-parameters" />
       <module name="Medicine-Amqp" options="-parameters" />
       <module name="Payment-Amqp" options="-parameters" />
+      <module name="Petclinic-Entity" options="-parameters" />
       <module name="orchestration-amqp" options="-parameters" />
     </option>
   </component>

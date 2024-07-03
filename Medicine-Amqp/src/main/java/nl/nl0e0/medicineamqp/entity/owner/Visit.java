@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nl.nl0e0.medicineamqp.entity.owner;
+package nl.nl0e0.petclinicentity.owner;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import nl.nl0e0.medicineamqp.entity.model.BaseEntity;
+import nl.nl0e0.petclinicentity.model.BaseEntity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;

@@ -1,9 +1,9 @@
 package nl.nl0e0.appointmentamqp.service;
 
 
-import nl.nl0e0.appointmentamqp.entity.appointment.AppointmentEntity;
-import nl.nl0e0.appointmentamqp.entity.appointment.CreateAppointmentDTO;
-import nl.nl0e0.appointmentamqp.entity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.appointment.AppointmentEntity;
+import nl.nl0e0.petclinicentity.appointment.CreateAppointmentDTO;
+import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
 import nl.nl0e0.appointmentamqp.repositroy.MedicalRecordRepository;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +20,11 @@ public class AmqpReceiver {
     @Autowired
     AmqpSender amqpSender;
 
-    @RabbitListener(queues = "createAppointmentQueue")
+    public CreateAppointmentDTO store = new CreateAppointmentDTO();
+
+    @RabbitListener(queues = "createAppointment")
     public void createAppointment(CreateAppointmentDTO createAppointmentDTO){
+        this.store = createAppointmentDTO;
         appointmentService.createAppointment(createAppointmentDTO);
     }
 
@@ -36,4 +39,5 @@ public class AmqpReceiver {
         List<MedicalRecord> medicalRecords = medicalRecordService.findByOwnerId(id);
         amqpSender.returnMedicalRecords(medicalRecords);
     }
+
 }

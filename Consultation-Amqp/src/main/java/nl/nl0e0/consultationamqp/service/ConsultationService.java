@@ -1,8 +1,8 @@
 package nl.nl0e0.consultationamqp.service;
 
 import lombok.Setter;
-import nl.nl0e0.consultationamqp.entity.appointment.MedicalRecord;
-import nl.nl0e0.consultationamqp.entity.consultation.ConsultationEntity;
+import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.consultation.ConsultationEntity;
 import nl.nl0e0.consultationamqp.repository.ConsultationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

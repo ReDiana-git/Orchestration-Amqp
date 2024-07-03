@@ -1,6 +1,6 @@
 package nl.nl0e0.paymentamqp.repository;
 
-import nl.nl0e0.paymentamqp.entity.payment.PaymentEntity;
+import nl.nl0e0.petclinicentity.payment.PaymentEntity;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;

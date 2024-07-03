@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nl.nl0e0.medicineamqp.entity.owner;
+package nl.nl0e0.petclinicentity.owner;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import nl.nl0e0.medicineamqp.entity.model.NamedEntity;
+import nl.nl0e0.petclinicentity.model.NamedEntity;
 
 
 /**

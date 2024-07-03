@@ -1,6 +1,6 @@
 package nl.nl0e0.paymentamqp.service;
 
-import nl.nl0e0.paymentamqp.entity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

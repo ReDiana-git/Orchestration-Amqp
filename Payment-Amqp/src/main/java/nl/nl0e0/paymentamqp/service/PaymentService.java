@@ -1,7 +1,7 @@
 package nl.nl0e0.paymentamqp.service;
 
-import nl.nl0e0.paymentamqp.entity.appointment.MedicalRecord;
-import nl.nl0e0.paymentamqp.entity.payment.PaymentEntity;
+import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.payment.PaymentEntity;
 import nl.nl0e0.paymentamqp.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

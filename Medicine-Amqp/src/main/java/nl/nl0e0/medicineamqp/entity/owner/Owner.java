@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nl.nl0e0.medicineamqp.entity.owner;
+package nl.nl0e0.petclinicentity.owner;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
-import nl.nl0e0.medicineamqp.entity.model.Person;
+import nl.nl0e0.petclinicentity.model.Person;
 import org.springframework.core.style.ToStringCreator;
 import org.springframework.util.Assert;
 

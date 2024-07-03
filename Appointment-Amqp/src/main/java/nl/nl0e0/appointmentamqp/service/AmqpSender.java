@@ -1,6 +1,6 @@
 package nl.nl0e0.appointmentamqp.service;
 
-import nl.nl0e0.appointmentamqp.entity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,6 +16,7 @@ public class AmqpSender {
     }
 
     public void returnMedicalRecords(List<MedicalRecord> medicalRecords) {
+        System.out.println("Send data to returnMedicalRecordsQueue success.");
         template.convertAndSend("returnMedicalRecordsExchange", "returnMedicalRecords", medicalRecords);
     }
 }

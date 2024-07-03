@@ -1,7 +1,7 @@
 package nl.nl0e0.consultationamqp.repository;
 
 import jakarta.transaction.Transactional;
-import nl.nl0e0.consultationamqp.entity.consultation.ConsultationEntity;
+import nl.nl0e0.petclinicentity.consultation.ConsultationEntity;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
