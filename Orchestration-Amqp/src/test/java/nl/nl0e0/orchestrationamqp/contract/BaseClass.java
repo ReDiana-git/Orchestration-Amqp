@@ -28,6 +28,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.annotation.Nullable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
@@ -55,6 +56,7 @@ public class BaseClass {
         this.controller.createAppointment(dto);
 
     }
+
 }
 
 @Configuration
@@ -77,6 +79,7 @@ class TestConfig{
 
         };
     }
+
 
 }
 class RabbitMessageVerifier implements MessageVerifierReceiver<Message>{

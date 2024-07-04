@@ -4,6 +4,8 @@ import nl.nl0e0.appointmentamqp.AppointmentAmqpApplication;
 import java.nio.charset.StandardCharsets;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -128,3 +130,4 @@ class TestConfig {
 	}
 
 }
+

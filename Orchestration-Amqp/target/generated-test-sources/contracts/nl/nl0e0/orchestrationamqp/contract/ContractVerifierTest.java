@@ -40,7 +40,7 @@ public class ContractVerifierTest extends BaseClass {
 			assertThatJson(parsedJson).field("['ownerId']").isEqualTo(1);
 			assertThatJson(parsedJson).field("['petId']").isEqualTo(2);
 			assertThatJson(parsedJson).field("['vetId']").isEqualTo(1);
-			assertThatJson(parsedJson).field("['appointmentDate']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['appointmentDate']").matches("[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?Z?");
 	}
 
 }

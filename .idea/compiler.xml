@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="orchestration-amqp" />
-        <module name="Medicine-Amqp" />
         <module name="Appointment-Amqp" />
-        <module name="Consultation-Amqp" />
         <module name="Payment-Amqp" />
         <module name="Petclinic-Entity" />
+        <module name="Medicine-Amqp" />
+        <module name="Consultation-Amqp" />
+        <module name="Orchestration-Amqp" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
       <module name="Appointment-Amqp" options="-parameters" />
       <module name="Consultation-Amqp" options="-parameters" />
       <module name="Medicine-Amqp" options="-parameters" />
+      <module name="Orchestration-Amqp" options="-parameters" />
       <module name="Payment-Amqp" options="-parameters" />
       <module name="Petclinic-Entity" options="-parameters" />
       <module name="orchestration-amqp" options="-parameters" />
