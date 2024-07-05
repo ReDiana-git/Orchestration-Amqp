@@ -6,39 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="331a3563-38c8-4e93-b7a3-ecf165363da0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/main/java/nl/nl0e0/appointmentamqp/config/AmqpConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/main/java/nl/nl0e0/appointmentamqp/config/AmqpConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/main/java/nl/nl0e0/appointmentamqp/service/AmqpReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/main/java/nl/nl0e0/appointmentamqp/service/AmqpReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/test/java/nl/nl0e0/appointmentamqp/contracts/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/test/java/nl/nl0e0/appointmentamqp/contracts/ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/test/java/nl/nl0e0/appointmentamqp/contracts/TestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/test/java/nl/nl0e0/appointmentamqp/contracts/TestConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/config/AmqpConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/config/AmqpConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/service/AmqpSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/service/AmqpSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/BaseClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources/contracts/contract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources/contracts/contract.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/Orchestration-Amqp-0.0.1-SNAPSHOT-stubs.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/Orchestration-Amqp-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/Orchestration-Amqp-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/classes/nl/nl0e0/orchestrationamqp/config/AmqpConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/classes/nl/nl0e0/orchestrationamqp/config/AmqpConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/classes/nl/nl0e0/orchestrationamqp/service/AmqpSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/classes/nl/nl0e0/orchestrationamqp/service/AmqpSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-resources/contracts/nl/nl0e0/orchestrationamqp/contract/contract.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-resources/contracts/nl/nl0e0/orchestrationamqp/contract/contract.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/test/java/nl/nl0e0/appointmentamqp/contracts/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/test/java/nl/nl0e0/appointmentamqp/contracts/consumer/ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/test/resources/contract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/test/resources/contract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/service/AmqpReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/main/java/nl/nl0e0/orchestrationamqp/service/AmqpReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/poducer/BaseClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/ContractVerifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/ContractVerifierTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/contract.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/contract.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-archiver/pom.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/spring-cloud-contract-maven-plugin/convert/default-convert/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/spring-cloud-contract-maven-plugin/convert/default-convert/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/spring-cloud-contract-maven-plugin/generateTests/default-generateTests/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/spring-cloud-contract-maven-plugin/generateTests/default-generateTests/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/stubs/META-INF/nl.nl0e0/Orchestration-Amqp/0.0.1-SNAPSHOT/contracts/contract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/stubs/META-INF/nl.nl0e0/Orchestration-Amqp/0.0.1-SNAPSHOT/contracts/contract.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/TEST-nl.nl0e0.orchestrationamqp.OrchestrationAmqpApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/TEST-nl.nl0e0.orchestrationamqp.contract.ContractVerifierTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/nl.nl0e0.orchestrationamqp.OrchestrationAmqpApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/nl.nl0e0.orchestrationamqp.contract.ContractVerifierTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/contracts/contract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/contracts/contract.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/BaseClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/BaseClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/2024-07-05T18-22-24_067-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/2024-07-05T18-22-24_067-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/TEST-nl.nl0e0.orchestrationamqp.contract.ContractVerifierTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/TEST-nl.nl0e0.orchestrationamqp.contract.ContractVerifierTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/nl.nl0e0.orchestrationamqp.contract.ContractVerifierTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/nl.nl0e0.orchestrationamqp.contract.ContractVerifierTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/ContractVerifierTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/ContractVerifierTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/RabbitMessageVerifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/RabbitMessageVerifier.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/TestConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/TestConfig$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/TestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/TestConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/contract.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/contract.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +70,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ApplicationTests (1).executor": "Run",
     "JUnit.ApplicationTests.contextLoads.executor": "Run",
     "JUnit.ApplicationTests.executor": "Run",
     "Maven.Appointment-Amqp [clean,install].executor": "Run",
@@ -105,7 +93,7 @@
     "Spring Boot.OrchestrationAmqpApplication.executor": "Run",
     "Spring Boot.PaymentAmqpApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "2908c76f",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "zulu-17",
     "kotlin-language-version-configured": "true",
@@ -115,7 +103,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
@@ -138,11 +126,11 @@
       <recent name="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="nl.nl0e0.orchestrationamqp.contract.consumer" />
       <recent name="nl.nl0e0.orchestrationamqp.entity" />
       <recent name="nl.nl0e0.medicineamqp.repository" />
       <recent name="nl.nl0e0.paymentamqp.entity.payment" />
       <recent name="nl.nl0e0.orchestrationamqp.entity.appointment" />
-      <recent name="nl.nl0e0.consultationamqp.entity.appointment" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -162,17 +150,32 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationTests.contextLoads">
+  <component name="RunManager" selected="JUnit.ApplicationTests">
+    <configuration name="ApplicationTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="orchestration-amqp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.nl0e0.orchestrationamqp.contract.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.nl0e0.orchestrationamqp.contract.consumer" />
+      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.orchestrationamqp.contract.consumer.ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Appointment-Amqp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="nl.nl0e0.appointmentamqp.contracts.*" />
+          <option name="PATTERN" value="nl.nl0e0.appointmentamqp.contracts.consumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="nl.nl0e0.appointmentamqp.contracts" />
-      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.appointmentamqp.contracts.ApplicationTests" />
+      <option name="PACKAGE_NAME" value="nl.nl0e0.appointmentamqp.contracts.consumer" />
+      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.appointmentamqp.contracts.consumer.ApplicationTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,12 +185,12 @@
       <module name="Appointment-Amqp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="nl.nl0e0.appointmentamqp.contracts.*" />
+          <option name="PATTERN" value="nl.nl0e0.appointmentamqp.contracts.consumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="nl.nl0e0.appointmentamqp.contracts" />
-      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.appointmentamqp.contracts.ApplicationTests" />
+      <option name="PACKAGE_NAME" value="nl.nl0e0.appointmentamqp.contracts.consumer" />
+      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.appointmentamqp.contracts.consumer.ApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -231,8 +234,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApplicationTests.contextLoads" />
         <item itemvalue="JUnit.ApplicationTests" />
+        <item itemvalue="JUnit.ApplicationTests (1)" />
+        <item itemvalue="JUnit.ApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>

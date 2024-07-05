@@ -1,10 +1,10 @@
 package nl.nl0e0.orchestrationamqp.contract;
 
-import nl.nl0e0.orchestrationamqp.contract.BaseClass;
+import nl.nl0e0.orchestrationamqp.contract.poducer.BaseClass;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+
 import javax.inject.Inject;
 import org.springframework.cloud.contract.verifier.messaging.internal.ContractVerifierObjectMapper;
 import org.springframework.cloud.contract.verifier.messaging.internal.ContractVerifierMessage;
@@ -13,8 +13,6 @@ import org.springframework.cloud.contract.verifier.messaging.internal.ContractVe
 import static org.springframework.cloud.contract.verifier.assertion.SpringCloudContractAssertions.assertThat;
 import static org.springframework.cloud.contract.verifier.util.ContractVerifierUtil.*;
 import static com.toomuchcoding.jsonassert.JsonAssertion.assertThatJson;
-import static org.springframework.cloud.contract.verifier.messaging.util.ContractVerifierMessagingUtil.headers;
-import static org.springframework.cloud.contract.verifier.util.ContractVerifierUtil.fileToBytes;
 
 @SuppressWarnings("rawtypes")
 public class ContractVerifierTest extends BaseClass {

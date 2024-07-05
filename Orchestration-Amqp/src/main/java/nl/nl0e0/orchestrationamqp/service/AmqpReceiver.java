@@ -12,8 +12,11 @@ public class AmqpReceiver {
     @Autowired
     OrchestrationService orchestrationService;
 
+    public MedicalRecord medicalStore;
+
     @RabbitListener(queues = "returnMedicalRecordQueue")
     public void returnMedicalRecord(MedicalRecord medicalRecord){
+        medicalStore = medicalRecord;
         orchestrationService.createPCM(medicalRecord);
     }
 

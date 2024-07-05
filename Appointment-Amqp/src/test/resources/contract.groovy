@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter
 
 Contract.make {
     description "should send a message when event occurs"
-    label "send message to orchestrator"
+    label "send_message_to_orchestrator"
 
     input {
         triggeredBy("trigger()")
