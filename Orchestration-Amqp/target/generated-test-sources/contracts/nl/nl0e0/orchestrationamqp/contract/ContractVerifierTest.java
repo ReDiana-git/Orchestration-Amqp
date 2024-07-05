@@ -27,7 +27,7 @@ public class ContractVerifierTest extends BaseClass {
 			trigger();
 
 		// then:
-			ContractVerifierMessage response = contractVerifierMessaging.receive("createAppointment",
+			ContractVerifierMessage response = contractVerifierMessaging.receive("createAppointmentQueue",
 					contract(this, "contract.yml"));
 			assertThat(response).isNotNull();
 
@@ -40,7 +40,7 @@ public class ContractVerifierTest extends BaseClass {
 			assertThatJson(parsedJson).field("['ownerId']").isEqualTo(1);
 			assertThatJson(parsedJson).field("['petId']").isEqualTo(2);
 			assertThatJson(parsedJson).field("['vetId']").isEqualTo(1);
-			assertThatJson(parsedJson).field("['appointmentDate']").matches("[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?Z?");
+			assertThatJson(parsedJson).field("['appointmentDate']").isEqualTo("2024-07-05T14:45:33.851107");
 	}
 
 }

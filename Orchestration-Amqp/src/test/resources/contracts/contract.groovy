@@ -14,12 +14,12 @@ Contract.make {
     }
 
     outputMessage {
-        sentTo "createAppointment"
+        sentTo "createAppointmentQueue"
         body([
                 ownerId: 1,
                 petId: 2,
                 vetId: 1,
-                appointmentDate: $(regex("[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?Z?"))
+                appointmentDate: "2024-07-05T14:45:33.851107"
         ])
         headers {
             header("amqp_receivedRoutingKey", "createAppointment")

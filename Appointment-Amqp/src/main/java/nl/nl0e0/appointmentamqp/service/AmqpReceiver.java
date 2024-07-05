@@ -22,7 +22,7 @@ public class AmqpReceiver {
 
     public CreateAppointmentDTO store = new CreateAppointmentDTO();
 
-    @RabbitListener(queues = "createAppointment")
+    @RabbitListener(queues = "createAppointmentQueue")
     public void createAppointment(CreateAppointmentDTO createAppointmentDTO){
         this.store = createAppointmentDTO;
         appointmentService.createAppointment(createAppointmentDTO);

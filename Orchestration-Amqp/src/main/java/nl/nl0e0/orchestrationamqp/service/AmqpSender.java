@@ -13,7 +13,7 @@ public class AmqpSender {
     @Autowired
     private RabbitTemplate template;
     public void createMedicalRecord(CreateAppointmentDTO createAppointMentDTO) {
-        template.convertAndSend("createAppointment", "createAppointment", createAppointMentDTO);
+        template.convertAndSend("createAppointmentExchange", "createAppointment", createAppointMentDTO);
     }
     public void createPCM(MedicalRecord medicalRecord) {
         template.convertAndSend("createPaymentExchange", "createPayment", medicalRecord);

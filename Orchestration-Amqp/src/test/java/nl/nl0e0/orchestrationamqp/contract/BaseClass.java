@@ -28,6 +28,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.annotation.Nullable;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -48,8 +49,11 @@ public class BaseClass {
     OrchestrationController controller;
 
     public void trigger() {
+        String dateTimeString = "2024-07-05T14:45:33.851107";
+        LocalDateTime dateTime = LocalDateTime.parse(dateTimeString, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+//        LocalDateTime dateTime = LocalDateTime.now();
         CreateAppointmentDTO dto = new CreateAppointmentDTO();
-        dto.setAppointmentDate(LocalDateTime.now());
+        dto.setAppointmentDate(dateTime);
         dto.setPetId(2);
         dto.setOwnerId(1);
         dto.setVetId(1);
@@ -97,7 +101,7 @@ class RabbitMessageVerifier implements MessageVerifierReceiver<Message>{
         }
     }
 
-    @RabbitListener(queues = "createAppointment")
+    @RabbitListener(queues = "createAppointmentQueue")
     public void listen(Message message) {
         log.info("Got a message! [{}]", message);
         queue.add(message);

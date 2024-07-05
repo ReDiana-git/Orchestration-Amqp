@@ -68,13 +68,13 @@ public class AmqpConfig {
 
     @Bean
     public Queue createAppointmentQueue() {
-        return new Queue("createAppointment", false);
+        return new Queue("createAppointmentQueue", false);
     }
 
     @Bean
     public Exchange createAppointmentExchange()
     {
-        return new DirectExchange("createAppointment");
+        return new DirectExchange("createAppointmentExchange");
     }
 
     @Bean

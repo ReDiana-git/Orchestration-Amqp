@@ -5,26 +5,19 @@ input:
   triggeredBy: "trigger()"
   assertThat: null
 outputMessage:
-  sentTo: "createAppointment"
+  sentTo: "createAppointmentQueue"
   headers:
     amqp_receivedRoutingKey: "createAppointment"
   body:
     ownerId: 1
     petId: 2
     vetId: 1
-    appointmentDate: "1957-87-34T97:12:07Z"
+    appointmentDate: "2024-07-05T14:45:33.851107"
   bodyFromFile: null
   bodyFromFileAsBytes: null
   assertThat: null
   matchers:
-    body:
-    - path: "$.['appointmentDate']"
-      type: "by_regex"
-      value: "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?Z?"
-      minOccurrence: null
-      maxOccurrence: null
-      predefined: null
-      regexType: "as_string"
+    body: []
     headers: []
     cookies: []
 description: "should send a message when event occurs"
