@@ -19,10 +19,14 @@ Contract.make {
                 ownerId: 1,
                 petId: 2,
                 vetId: 1,
-                appointmentDate: "2024-07-05T14:45:33.851107"
+                id: $(anyNonBlankString()),
+                appointmentId: $(anyNonBlankString()),
+                consultationId: $(anyNonBlankString()),
+                paymentId: $(anyNonBlankString()),
+                medicineId: $(anyNonBlankString())
         ])
         headers {
-            header("amqp_receivedRoutingKey", "createAppointment")
+            header("amqp_receivedRoutingKey", "createConsultation")
         }
     }
 }

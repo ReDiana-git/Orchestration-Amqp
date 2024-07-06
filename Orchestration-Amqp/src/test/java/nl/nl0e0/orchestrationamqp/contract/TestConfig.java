@@ -103,6 +103,11 @@ class RabbitMessageVerifier implements MessageVerifierReceiver<Message> {
         log.info("Got a message! [{}]", message);
         queue.add(message);
     }
+    @RabbitListener(queues = "createConsultationQueue")
+    public void listen4consultation(Message message) {
+        log.info("Got a message! [{}]", message);
+        queue.add(message);
+    }
 
     @Override
     public Message receive(String destination, YamlContract contract) {
