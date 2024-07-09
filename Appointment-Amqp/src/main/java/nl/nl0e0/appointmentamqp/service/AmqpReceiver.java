@@ -34,7 +34,7 @@ public class AmqpReceiver {
             appointmentService.deleteAll();
     }
 
-    @RabbitListener(queues = "getIdByOwnerQueue")
+    @RabbitListener(queues = "getIdByOwner")
     public void getAppointmentByOwner(Integer id){
         List<MedicalRecord> medicalRecords = medicalRecordService.findByOwnerId(id);
         amqpSender.returnMedicalRecords(medicalRecords);

@@ -30,6 +30,6 @@ public class AmqpSender {
 
     public void findByOwnerId(Integer id) {
         System.out.println("Send data to getIdByOwnerExchange.");
-        template.convertAndSend("getIdByOwnerExchange", "getIdByOwner", id);
+        template.convertAndSend("getIdByOwner", "getIdByOwner", id);
     }
 }

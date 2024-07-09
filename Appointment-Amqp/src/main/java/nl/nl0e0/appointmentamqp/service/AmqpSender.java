@@ -12,11 +12,11 @@ public class AmqpSender {
     @Autowired
     private RabbitTemplate template;
     public void returnMedicalRecord(MedicalRecord medicalRecord){
-        template.convertAndSend("returnMedicalRecordExchange", "returnMedicalRecord", medicalRecord);
+        template.convertAndSend("returnMedicalRecord", "returnMedicalRecord", medicalRecord);
     }
 
     public void returnMedicalRecords(List<MedicalRecord> medicalRecords) {
         System.out.println("Send data to returnMedicalRecordsQueue success.");
-        template.convertAndSend("returnMedicalRecordsExchange", "returnMedicalRecords", medicalRecords);
+        template.convertAndSend("returnMedicalRecords", "returnMedicalRecords", medicalRecords);
     }
 }

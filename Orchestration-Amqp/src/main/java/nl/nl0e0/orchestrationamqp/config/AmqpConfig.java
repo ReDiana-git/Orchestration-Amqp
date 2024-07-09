@@ -203,13 +203,13 @@ public class AmqpConfig {
 
     @Bean
     public Queue getIdByOwnerQueue() {
-        return new Queue("getIdByOwnerQueue", false);
+        return new Queue("getIdByOwner", false);
     }
 
     @Bean
     public Exchange getIdByOwnerExchange()
     {
-        return new DirectExchange("getIdByOwnerExchange");
+        return new DirectExchange("getIdByOwner");
     }
 
     @Bean

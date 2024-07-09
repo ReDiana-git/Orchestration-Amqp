@@ -1,0 +1,4 @@
+META-INF\nl.nl0e0\Orchestration-Amqp\0.0.1-SNAPSHOT\contracts\createAppointmentContract.groovy
+META-INF\nl.nl0e0\Orchestration-Amqp\0.0.1-SNAPSHOT\contracts\createMedicineContract.groovy
+META-INF\nl.nl0e0\Orchestration-Amqp\0.0.1-SNAPSHOT\contracts\createConsultationContract.groovy
+META-INF\nl.nl0e0\Orchestration-Amqp\0.0.1-SNAPSHOT\contracts\createPaymentContract.groovy

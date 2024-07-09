@@ -25,13 +25,13 @@ public class AmqpConfig {
 
     @Bean
     public Queue deleteAppointmentQueue() {
-        return new Queue("deleteAppointmentQueue", false);
+        return new Queue("deleteAppointment", false);
     }
 
     @Bean
     public Exchange deleteAppointmentExchange()
     {
-        return new DirectExchange("deleteAppointmentExchange");
+        return new DirectExchange("deleteAppointment");
     }
 
     @Bean
@@ -44,13 +44,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue getIdByOwnerQueue() {
-        return new Queue("getIdByOwnerQueue", false);
+        return new Queue("getIdByOwner", false);
     }
 
     @Bean
     public Exchange getIdByOwnerExchange()
     {
-        return new DirectExchange("getIdByOwnerExchange");
+        return new DirectExchange("getIdByOwner");
     }
 
     @Bean
@@ -63,13 +63,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue returnMedicalRecordQueue() {
-        return new Queue("returnMedicalRecordQueue", false);
+        return new Queue("returnMedicalRecord", false);
     }
 
     @Bean
     public Exchange returnMedicalRecordExchange()
     {
-        return new DirectExchange("returnMedicalRecordExchange");
+        return new DirectExchange("returnMedicalRecord");
     }
 
     @Bean
@@ -82,13 +82,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue returnMedicalRecordsQueue() {
-        return new Queue("returnMedicalRecordsQueue", false);
+        return new Queue("returnMedicalRecords", false);
     }
 
     @Bean
     public Exchange returnMedicalRecordsExchange()
     {
-        return new DirectExchange("returnMedicalRecordsExchange");
+        return new DirectExchange("returnMedicalRecords");
     }
 
     @Bean
@@ -107,13 +107,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue createAppointmentQueue() {
-        return new Queue("createAppointmentQueue", false);
+        return new Queue("createAppointment", false);
     }
 
     @Bean
     public Exchange createAppointmentExchange()
     {
-        return new TopicExchange("createAppointmentExchange");
+        return new TopicExchange("createAppointment");
     }
 
     @Bean
