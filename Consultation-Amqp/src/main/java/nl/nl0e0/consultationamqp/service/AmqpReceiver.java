@@ -10,11 +10,13 @@ public class AmqpReceiver {
 
     @Autowired
     ConsultationService consultationService;
-    @RabbitListener(queues = "createConsultationQueue")
+    public MedicalRecord store;
+    @RabbitListener(queues = "createConsultation")
     public void createConsultation(MedicalRecord medicalRecord){
+        store = medicalRecord;
         consultationService.createAppointment(medicalRecord);
     }
-    @RabbitListener(queues = "deleteConsultationQueue")
+    @RabbitListener(queues = "deleteConsultation")
     public void deleteConsultation(String string){
         if(string.equals("delete"))
             consultationService.deleteAll();

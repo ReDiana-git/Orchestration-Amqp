@@ -1,48 +1,27 @@
-package nl.nl0e0.appointmentamqp.contracts.consumer;
+package nl.nl0e0.appointmentamqp.contract.consumer;
 
 import nl.nl0e0.appointmentamqp.AppointmentAmqpApplication;
-import java.nio.charset.StandardCharsets;
 
 import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
 
-import javax.annotation.Nullable;
-
-import nl.nl0e0.appointmentamqp.contracts.TestConfig;
+import nl.nl0e0.appointmentamqp.contract.TestConfig;
 import nl.nl0e0.appointmentamqp.service.AmqpReceiver;
-import nl.nl0e0.petclinicentity.appointment.CreateAppointmentDTO;
 import org.assertj.core.api.BDDAssertions;
 import org.awaitility.Awaitility;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testcontainers.containers.RabbitMQContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
-import org.springframework.amqp.core.*;
 
-import org.springframework.amqp.core.Message;
-import org.springframework.amqp.core.MessageBuilder;
-import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.stubrunner.StubTrigger;
 import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner;
 import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties;
-import org.springframework.cloud.contract.verifier.converter.YamlContract;
-import org.springframework.cloud.contract.verifier.messaging.MessageVerifierSender;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.messaging.MessageHeaders;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
-
-import java.util.Map;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE, classes = {TestConfig.class, AppointmentAmqpApplication.class}, properties = "stubrunner.amqp.mockConnection=false")
 @AutoConfigureStubRunner(ids = "nl.nl0e0:Orchestration-Amqp", stubsMode = StubRunnerProperties.StubsMode.LOCAL)

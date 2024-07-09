@@ -1,4 +1,4 @@
-package nl.nl0e0.appointmentamqp.contracts;
+package nl.nl0e0.consultationamqp.contract;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,15 +26,13 @@ import java.util.concurrent.TimeUnit;
 
 @Configuration
 public class TestConfig{
-
     private static final Logger log = LoggerFactory.getLogger(TestConfig.class);
-
     @Bean
     MessageVerifierSender<Message<?>> testMessageVerifier(RabbitTemplate rabbitTemplate) {
         return new MessageVerifierSender<>() {
 
             @Override
-            public void send(org.springframework.messaging.Message<?> message, String destination, @Nullable YamlContract contract) {
+            public void send(Message<?> message, String destination, @Nullable YamlContract contract) {
                 log.info("Sending a message to destination [{}]", destination);
                 System.out.println("Sending a message" + message);
 //				rabbitTemplate.convertAndSend("createAppointmentExchange", destination, message);
@@ -47,7 +45,7 @@ public class TestConfig{
                 send(org.springframework.messaging.support.MessageBuilder.withPayload(payload).copyHeaders(headers).build(), destination, contract);
             }
 
-            private org.springframework.amqp.core.Message toMessage(org.springframework.messaging.Message<?> msg) {
+            private org.springframework.amqp.core.Message toMessage(Message<?> msg) {
                 Object payload = msg.getPayload();
                 MessageHeaders headers = msg.getHeaders();
                 Map<String, Object> newHeaders = headers != null ? new HashMap<>(headers) : new HashMap<>();
@@ -100,11 +98,6 @@ class RabbitMessageVerifier implements MessageVerifierReceiver<Message> {
         }
     }
 
-    @RabbitListener(queues = "returnMedicalRecordQueue")
-    public void listen(Message message) {
-        log.info("Got a message! [{}]", message);
-        queue.add(message);
-    }
 
     @Override
     public Message receive(String destination, YamlContract contract) {

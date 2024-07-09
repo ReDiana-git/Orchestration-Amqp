@@ -1,8 +1,8 @@
-package nl.nl0e0.orchestrationamqp.contract.consumer;
+package nl.nl0e0.consultationamqp.contract.consumer;
 
-import nl.nl0e0.orchestrationamqp.OrchestrationAmqpApplication;
-import nl.nl0e0.orchestrationamqp.contract.TestConfig;
-import nl.nl0e0.orchestrationamqp.service.AmqpReceiver;
+import nl.nl0e0.consultationamqp.ConsultationAmqpApplication;
+import nl.nl0e0.consultationamqp.contract.TestConfig;
+import nl.nl0e0.consultationamqp.service.AmqpReceiver;
 import org.assertj.core.api.BDDAssertions;
 import org.awaitility.Awaitility;
 import org.junit.jupiter.api.Test;
@@ -21,8 +21,8 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.time.Duration;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE, classes = {TestConfig.class, OrchestrationAmqpApplication.class}, properties = "stubrunner.amqp.mockConnection=false")
-@AutoConfigureStubRunner(ids = "nl.nl0e0:Appointment-Amqp", stubsMode = StubRunnerProperties.StubsMode.LOCAL)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE, classes = {TestConfig.class, ConsultationAmqpApplication.class}, properties = "stubrunner.amqp.mockConnection=false")
+@AutoConfigureStubRunner(ids = "nl.nl0e0:Orchestration-Amqp", stubsMode = StubRunnerProperties.StubsMode.LOCAL)
 @Testcontainers
 @ActiveProfiles("test")
 public class ApplicationTests {
@@ -47,21 +47,21 @@ public class ApplicationTests {
 	@Autowired
 	private RabbitTemplate template;
 
-//	@Test
-//	public void contextLoads() {
-//		this.trigger.trigger("send_message_to_orchestrator");
-//
-////		template.convertAndSend("createAppointmentExchange", "createAppointment", new CreateAppointmentDTO());
-//
-//		// 打印实际映射的管理界面端口
-//		System.out.println("RabbitMQ Management Interface is available at http://localhost:" + rabbit.getMappedPort(15672));
-//
-//		Awaitility.await().atMost(Duration.ofMinutes(10)).untilAsserted(() -> {
-//			BDDAssertions.then(this.amqpReceiver.medicalStore).isNotNull();
-//			BDDAssertions.then(this.amqpReceiver.medicalStore.getOwnerId()).isEqualTo(1);
-//		});
-//
-//	}
+	@Test
+	public void contextLoads() {
+		this.trigger.trigger("send_message_to_consultation");
+
+//		template.convertAndSend("createAppointmentExchange", "createAppointment", new CreateAppointmentDTO());
+
+		// 打印实际映射的管理界面端口
+		System.out.println("RabbitMQ Management Interface is available at http://localhost:" + rabbit.getMappedPort(15672));
+
+		Awaitility.await().atMost(Duration.ofMinutes(10)).untilAsserted(() -> {
+			BDDAssertions.then(this.amqpReceiver.store).isNotNull();
+			BDDAssertions.then(this.amqpReceiver.store.getOwnerId()).isEqualTo(1);
+		});
+
+	}
 }
 
 

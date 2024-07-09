@@ -33,7 +33,7 @@ public class BaseClass {
     @Autowired
     OrchestrationController controller;
 
-//    @Autowired
+    @Autowired
     OrchestrationService service;
 
     public void trigger() {
@@ -58,7 +58,6 @@ public class BaseClass {
         MedicalRecord medicalRecord = new MedicalRecord(dto);
         this.service.createPCM(medicalRecord);
     }
-
 }
 
 

@@ -129,6 +129,15 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-contract-maven-plugin</artifactId>
+                <version>4.1.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <baseClassForTests>nl.nl0e0.appointmentamqp.contract.producer.BaseClass</baseClassForTests>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

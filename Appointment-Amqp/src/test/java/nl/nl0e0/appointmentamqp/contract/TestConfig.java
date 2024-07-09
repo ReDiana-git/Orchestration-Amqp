@@ -1,4 +1,4 @@
-package nl.nl0e0.orchestrationamqp.contract;
+package nl.nl0e0.appointmentamqp.contract;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,9 @@ import java.util.concurrent.TimeUnit;
 
 @Configuration
 public class TestConfig{
+
     private static final Logger log = LoggerFactory.getLogger(TestConfig.class);
+
     @Bean
     MessageVerifierSender<Message<?>> testMessageVerifier(RabbitTemplate rabbitTemplate) {
         return new MessageVerifierSender<>() {
@@ -98,23 +100,8 @@ class RabbitMessageVerifier implements MessageVerifierReceiver<Message> {
         }
     }
 
-    @RabbitListener(queues = "createAppointment")
+    @RabbitListener(queues = "returnMedicalRecordQueue")
     public void listen(Message message) {
-        log.info("Got a message! [{}]", message);
-        queue.add(message);
-    }
-    @RabbitListener(queues = "createConsultation")
-    public void listen4consultation(Message message) {
-        log.info("Got a message! [{}]", message);
-        queue.add(message);
-    }
-    @RabbitListener(queues = "createPayment")
-    public void listen4payment(Message message) {
-        log.info("Got a message! [{}]", message);
-        queue.add(message);
-    }
-    @RabbitListener(queues = "createMedicine")
-    public void listen4medicine(Message message) {
         log.info("Got a message! [{}]", message);
         queue.add(message);
     }

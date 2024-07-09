@@ -10,13 +10,13 @@ public class AmqpConfig {
 
     @Bean
     public Queue createConsultationQueue() {
-        return new Queue("createConsultationQueue", false);
+        return new Queue("createConsultation", false);
     }
 
     @Bean
     public Exchange createConsultationExchange()
     {
-        return new DirectExchange("createConsultationExchange");
+        return new TopicExchange("createConsultation");
     }
 
     @Bean
@@ -29,13 +29,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue createPaymentQueue() {
-        return new Queue("createPaymentQueue", false);
+        return new Queue("createPayment", false);
     }
 
     @Bean
     public Exchange createPaymentExchange()
     {
-        return new DirectExchange("createPaymentExchange");
+        return new TopicExchange("createPayment");
     }
 
     @Bean
@@ -48,13 +48,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue createMedicineQueue() {
-        return new Queue("createMedicineQueue", false);
+        return new Queue("createMedicine", false);
     }
 
     @Bean
     public Exchange createMedicineExchange()
     {
-        return new DirectExchange("createMedicineExchange");
+        return new TopicExchange("createMedicine");
     }
 
     @Bean
@@ -68,13 +68,13 @@ public class AmqpConfig {
 
     @Bean
     public Queue createAppointmentQueue() {
-        return new Queue("createAppointmentQueue", false);
+        return new Queue("createAppointment", false);
     }
 
     @Bean
     public Exchange createAppointmentExchange()
     {
-        return new DirectExchange("createAppointmentExchange");
+        return new DirectExchange("createAppointment");
     }
 
     @Bean
