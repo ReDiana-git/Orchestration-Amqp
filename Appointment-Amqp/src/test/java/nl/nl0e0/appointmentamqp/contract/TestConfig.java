@@ -100,7 +100,7 @@ class RabbitMessageVerifier implements MessageVerifierReceiver<Message> {
         }
     }
 
-    @RabbitListener(queues = "returnMedicalRecordQueue")
+    @RabbitListener(queues = "createConsultation")
     public void listen(Message message) {
         log.info("Got a message! [{}]", message);
         queue.add(message);

@@ -4,7 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="331a3563-38c8-4e93-b7a3-ecf165363da0" name="Changes" comment="" />
+    <list default="true" id="331a3563-38c8-4e93-b7a3-ecf165363da0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/main/java/nl/nl0e0/appointmentamqp/service/AmqpReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/main/java/nl/nl0e0/appointmentamqp/service/AmqpReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/test/java/nl/nl0e0/appointmentamqp/contract/TestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/test/java/nl/nl0e0/appointmentamqp/contract/TestConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment-Amqp/src/test/resources/contracts/contract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment-Amqp/src/test/resources/contracts/contract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consultation-Amqp/src/main/java/nl/nl0e0/consultationamqp/config/AmqpConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Consultation-Amqp/src/main/java/nl/nl0e0/consultationamqp/config/AmqpConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources/contracts/createConsultationContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources/contracts/createConsultationContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources/contracts/createMedicineContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources/contracts/createMedicineContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources/contracts/createPaymentContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/src/test/resources/contracts/createPaymentContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/Orchestration-Amqp-0.0.1-SNAPSHOT-stubs.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/Orchestration-Amqp-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/Orchestration-Amqp-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/classes/nl/nl0e0/orchestrationamqp/config/AmqpConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/classes/nl/nl0e0/orchestrationamqp/config/AmqpConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/classes/nl/nl0e0/orchestrationamqp/service/AmqpSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/classes/nl/nl0e0/orchestrationamqp/service/AmqpSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-resources/contracts/nl/nl0e0/orchestrationamqp/contract/producer/createConsultationContract.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-resources/contracts/nl/nl0e0/orchestrationamqp/contract/producer/createConsultationContract.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/producer/createConsultationContract.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/producer/createConsultationContract.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/spring-cloud-contract-maven-plugin/convert/default-convert/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/spring-cloud-contract-maven-plugin/convert/default-convert/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/spring-cloud-contract-maven-plugin/generateTests/default-generateTests/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/maven-status/spring-cloud-contract-maven-plugin/generateTests/default-generateTests/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/stubs/META-INF/nl.nl0e0/Orchestration-Amqp/0.0.1-SNAPSHOT/contracts/createConsultationContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/stubs/META-INF/nl.nl0e0/Orchestration-Amqp/0.0.1-SNAPSHOT/contracts/createConsultationContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/stubs/META-INF/nl.nl0e0/Orchestration-Amqp/0.0.1-SNAPSHOT/contracts/createMedicineContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/stubs/META-INF/nl.nl0e0/Orchestration-Amqp/0.0.1-SNAPSHOT/contracts/createMedicineContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/stubs/META-INF/nl.nl0e0/Orchestration-Amqp/0.0.1-SNAPSHOT/contracts/createPaymentContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/stubs/META-INF/nl.nl0e0/Orchestration-Amqp/0.0.1-SNAPSHOT/contracts/createPaymentContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/TEST-nl.nl0e0.orchestrationamqp.OrchestrationAmqpApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/TEST-nl.nl0e0.orchestrationamqp.OrchestrationAmqpApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/TEST-nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/TEST-nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/nl.nl0e0.orchestrationamqp.OrchestrationAmqpApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/nl.nl0e0.orchestrationamqp.OrchestrationAmqpApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/surefire-reports/nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/contracts/createConsultationContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/contracts/createConsultationContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/contracts/createMedicineContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/contracts/createMedicineContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/contracts/createPaymentContract.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/contracts/createPaymentContract.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/producer/createConsultationContract.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Orchestration-Amqp/target/test-classes/nl/nl0e0/orchestrationamqp/contract/producer/createConsultationContract.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,9 +174,24 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ContractVerifierTest">
-    <configuration name="ContractVerifierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="orchestration-amqp" />
+  <component name="RunManager" selected="JUnit.ApplicationTests">
+    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Appointment-Amqp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.nl0e0.appointmentamqp.contract.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.nl0e0.appointmentamqp.contract.consumer" />
+      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.appointmentamqp.contract.consumer.ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContractVerifierTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Orchestration-Amqp" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.nl0e0.orchestrationamqp.contract.producer.*" />
@@ -153,8 +205,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ContractVerifierTestCreateAppointment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Orchestration-Amqp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.nl0e0.orchestrationamqp.contract.producer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer" />
+      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTestCreateAppointment" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContractVerifierTestCreateAppointment.validate_createAppointmentContract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Orchestration-Amqp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.nl0e0.orchestrationamqp.contract.producer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer" />
+      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTestCreateAppointment" />
+      <option name="METHOD_NAME" value="validate_createAppointmentContract" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ContractVerifierTest.validate_createAppointmentContract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="orchestration-amqp" />
+      <module name="Orchestration-Amqp" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.nl0e0.orchestrationamqp.contract.producer.*" />
@@ -164,54 +247,6 @@
       <option name="PACKAGE_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer" />
       <option name="MAIN_CLASS_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest" />
       <option name="METHOD_NAME" value="validate_createAppointmentContract" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContractVerifierTest.validate_createConsultationContract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="orchestration-amqp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.nl0e0.orchestrationamqp.contract.producer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer" />
-      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest" />
-      <option name="METHOD_NAME" value="validate_createConsultationContract" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContractVerifierTest.validate_createMedicineContract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="orchestration-amqp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.nl0e0.orchestrationamqp.contract.producer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer" />
-      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest" />
-      <option name="METHOD_NAME" value="validate_createMedicineContract" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContractVerifierTest.validate_createPaymentContract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="orchestration-amqp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.nl0e0.orchestrationamqp.contract.producer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer" />
-      <option name="MAIN_CLASS_NAME" value="nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest" />
-      <option name="METHOD_NAME" value="validate_createPaymentContract" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -239,7 +274,7 @@
       </method>
     </configuration>
     <configuration name="OrchestrationAmqpApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="orchestration-amqp" />
+      <module name="Orchestration-Amqp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="nl.nl0e0.orchestrationamqp.OrchestrationAmqpApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -254,11 +289,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ContractVerifierTest" />
+        <item itemvalue="JUnit.ApplicationTests" />
+        <item itemvalue="JUnit.ContractVerifierTestCreateAppointment" />
+        <item itemvalue="JUnit.ContractVerifierTestCreateAppointment.validate_createAppointmentContract" />
         <item itemvalue="JUnit.ContractVerifierTest.validate_createAppointmentContract" />
-        <item itemvalue="JUnit.ContractVerifierTest.validate_createPaymentContract" />
-        <item itemvalue="JUnit.ContractVerifierTest.validate_createMedicineContract" />
-        <item itemvalue="JUnit.ContractVerifierTest.validate_createConsultationContract" />
+        <item itemvalue="JUnit.ContractVerifierTest (1)" />
       </list>
     </recent_temporary>
   </component>

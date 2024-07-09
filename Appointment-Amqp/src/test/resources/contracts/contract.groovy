@@ -14,7 +14,7 @@ Contract.make {
     }
 
     outputMessage {
-        sentTo "returnMedicalRecordQueue"
+        sentTo "returnMedicalRecord"
         body([
                 ownerId: 1,
                 petId: 2,

@@ -22,13 +22,13 @@ public class AmqpReceiver {
 
     public CreateAppointmentDTO store = new CreateAppointmentDTO();
 
-    @RabbitListener(queues = "createAppointmentQueue")
+    @RabbitListener(queues = "createAppointment")
     public void createAppointment(CreateAppointmentDTO createAppointmentDTO){
         this.store = createAppointmentDTO;
         appointmentService.createAppointment(createAppointmentDTO);
     }
 
-    @RabbitListener(queues = "deleteAppointmentQueue")
+    @RabbitListener(queues = "deleteAppointment")
     public void deleteAppointment(String string){
         if(string.equals("delete"))
             appointmentService.deleteAll();
