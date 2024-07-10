@@ -100,22 +100,22 @@ class RabbitMessageVerifier implements MessageVerifierReceiver<Message> {
 
     @RabbitListener(queues = "createAppointment")
     public void listen(Message message) {
-        log.info("Got a message! [{}]", message);
+        log.info("Got a message from createAppointment! [{}]", message);
         queue.add(message);
     }
     @RabbitListener(queues = "createConsultation")
     public void listen4consultation(Message message) {
-        log.info("Got a message! [{}]", message);
+        log.info("Got a message from createConsultation! [{}]", message);
         queue.add(message);
     }
     @RabbitListener(queues = "createPayment")
     public void listen4payment(Message message) {
-        log.info("Got a message! [{}]", message);
+        log.info("Got a message from createPayment! [{}]", message);
         queue.add(message);
     }
     @RabbitListener(queues = "createMedicine")
     public void listen4medicine(Message message) {
-        log.info("Got a message! [{}]", message);
+        log.info("Got a message from createMedicine! [{}]", message);
         queue.add(message);
     }
 

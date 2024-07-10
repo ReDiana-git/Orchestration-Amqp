@@ -1,0 +1,67 @@
+---
+request: null
+response: null
+input:
+  triggeredBy: "trigger1()"
+  assertThat: null
+outputMessage:
+  sentTo: "createConsultation"
+  headers: null
+  body:
+    ownerId: 1
+    petId: 2
+    vetId: 1
+    id: "GTDFERCASXCODOVDHHGM"
+    appointmentId: "FVSOLQIFICEXYUWALGVY"
+    consultationId: "KFAZMILVRWBKDJLMQAOY"
+    paymentId: "FDTLJONUISHRLJZDXVRY"
+    medicineId: "GQAYTICRQPGHNBEHSWZF"
+  bodyFromFile: null
+  bodyFromFileAsBytes: null
+  assertThat: null
+  matchers:
+    body:
+    - path: "$.['id']"
+      type: "by_regex"
+      value: "^\\s*\\S[\\S\\s]*"
+      minOccurrence: null
+      maxOccurrence: null
+      predefined: null
+      regexType: "as_string"
+    - path: "$.['appointmentId']"
+      type: "by_regex"
+      value: "^\\s*\\S[\\S\\s]*"
+      minOccurrence: null
+      maxOccurrence: null
+      predefined: null
+      regexType: "as_string"
+    - path: "$.['consultationId']"
+      type: "by_regex"
+      value: "^\\s*\\S[\\S\\s]*"
+      minOccurrence: null
+      maxOccurrence: null
+      predefined: null
+      regexType: "as_string"
+    - path: "$.['paymentId']"
+      type: "by_regex"
+      value: "^\\s*\\S[\\S\\s]*"
+      minOccurrence: null
+      maxOccurrence: null
+      predefined: null
+      regexType: "as_string"
+    - path: "$.['medicineId']"
+      type: "by_regex"
+      value: "^\\s*\\S[\\S\\s]*"
+      minOccurrence: null
+      maxOccurrence: null
+      predefined: null
+      regexType: "as_string"
+    headers: []
+    cookies: []
+description: "should send a message when event occurs"
+label: "send_message_to_consultation"
+name: "createConsultationContract"
+priority: null
+ignored: false
+inProgress: false
+metadata: {}

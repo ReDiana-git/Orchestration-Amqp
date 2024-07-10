@@ -1,0 +1,28 @@
+---
+request: null
+response: null
+input:
+  triggeredBy: "trigger()"
+  assertThat: null
+outputMessage:
+  sentTo: "createAppointment"
+  headers: null
+  body:
+    ownerId: 1
+    petId: 2
+    vetId: 1
+    appointmentDate: "2024-07-05T14:45:33.851107"
+  bodyFromFile: null
+  bodyFromFileAsBytes: null
+  assertThat: null
+  matchers:
+    body: []
+    headers: []
+    cookies: []
+description: "should send a message when event occurs"
+label: "event_occurred"
+name: "createAppointmentContract"
+priority: null
+ignored: false
+inProgress: false
+metadata: {}
