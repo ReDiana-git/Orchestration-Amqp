@@ -88,8 +88,11 @@ class RabbitMessageVerifier implements MessageVerifierReceiver<Message> {
 
     private final LinkedBlockingQueue<Message> queue = new LinkedBlockingQueue<>();
 
+
     @Override
     public Message receive(String destination, long timeout, TimeUnit timeUnit, @Nullable YamlContract contract) {
+//        log.info("Clear the blockingQueue!");
+//        queue.clear();
         try {
             return queue.poll(timeout, timeUnit);
         }

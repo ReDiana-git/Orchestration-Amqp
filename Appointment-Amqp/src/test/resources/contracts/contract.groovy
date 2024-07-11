@@ -2,9 +2,6 @@ package contracts
 
 import org.springframework.cloud.contract.spec.Contract
 
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-
 Contract.make {
     description "should send a message when event occurs"
     label "send_message_to_orchestrator"

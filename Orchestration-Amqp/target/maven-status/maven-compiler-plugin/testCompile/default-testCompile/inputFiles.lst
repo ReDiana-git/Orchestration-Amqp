@@ -2,8 +2,4 @@
 /Users/rediana/Project/Orchestration-Amqp/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/TestConfig.java
 /Users/rediana/Project/Orchestration-Amqp/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/consumer/ApplicationTests.java
 /Users/rediana/Project/Orchestration-Amqp/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/producer/BaseClass.java
-/Users/rediana/Project/Orchestration-Amqp/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTestCreateAppointment.java
-/Users/rediana/Project/Orchestration-Amqp/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTestCreateConsultation.java
-/Users/rediana/Project/Orchestration-Amqp/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTestCreateMedicine.java
-/Users/rediana/Project/Orchestration-Amqp/Orchestration-Amqp/src/test/java/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTestCreatePayment.java
 /Users/rediana/Project/Orchestration-Amqp/Orchestration-Amqp/target/generated-test-sources/contracts/nl/nl0e0/orchestrationamqp/contract/producer/ContractVerifierTest.java

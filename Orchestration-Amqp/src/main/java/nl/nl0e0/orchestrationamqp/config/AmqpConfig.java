@@ -16,7 +16,7 @@ public class AmqpConfig {
     @Bean
     public Exchange createConsultationExchange()
     {
-        return new TopicExchange("createConsultation");
+        return new DirectExchange("createConsultation");
     }
 
     @Bean
@@ -35,7 +35,7 @@ public class AmqpConfig {
     @Bean
     public Exchange createPaymentExchange()
     {
-        return new TopicExchange("createPayment");
+        return new DirectExchange("createPayment");
     }
 
     @Bean
@@ -54,7 +54,7 @@ public class AmqpConfig {
     @Bean
     public Exchange createMedicineExchange()
     {
-        return new TopicExchange("createMedicine");
+        return new DirectExchange("createMedicine");
     }
 
     @Bean
@@ -87,13 +87,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue deleteAppointmentQueue() {
-        return new Queue("deleteAppointmentQueue", false);
+        return new Queue("deleteAppointment", false);
     }
 
     @Bean
     public Exchange deleteAppointmentExchange()
     {
-        return new DirectExchange("deleteAppointmentExchange");
+        return new DirectExchange("deleteAppointment");
     }
 
     @Bean
@@ -107,13 +107,13 @@ public class AmqpConfig {
 
     @Bean
     public Queue deleteMedicineQueue() {
-        return new Queue("deleteMedicineQueue", false);
+        return new Queue("deleteMedicine", false);
     }
 
     @Bean
     public Exchange deleteMedicineExchange()
     {
-        return new DirectExchange("deleteMedicineExchange");
+        return new DirectExchange("deleteMedicine");
     }
 
     @Bean
@@ -126,13 +126,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue deletePaymentQueue() {
-        return new Queue("deletePaymentQueue", false);
+        return new Queue("deletePayment", false);
     }
 
     @Bean
     public Exchange deletePaymentExchange()
     {
-        return new DirectExchange("deletePaymentExchange");
+        return new DirectExchange("deletePayment");
     }
 
     @Bean
@@ -145,13 +145,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue deleteConsultationQueue() {
-        return new Queue("deleteConsultationQueue", false);
+        return new Queue("deleteConsultation", false);
     }
 
     @Bean
     public Exchange deleteConsultationExchange()
     {
-        return new DirectExchange("deleteConsultationExchange");
+        return new DirectExchange("deleteConsultation");
     }
 
     @Bean
@@ -164,13 +164,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue returnMedicalRecordQueue() {
-        return new Queue("returnMedicalRecordQueue", false);
+        return new Queue("returnMedicalRecord", false);
     }
 
     @Bean
     public Exchange returnMedicalRecordExchange()
     {
-        return new DirectExchange("returnMedicalRecordExchange");
+        return new DirectExchange("returnMedicalRecord");
     }
 
     @Bean
@@ -183,13 +183,13 @@ public class AmqpConfig {
     }
     @Bean
     public Queue returnMedicalRecordsQueue() {
-        return new Queue("returnMedicalRecordsQueue", false);
+        return new Queue("returnMedicalRecords", false);
     }
 
     @Bean
     public Exchange returnMedicalRecordsExchange()
     {
-        return new DirectExchange("returnMedicalRecordsExchange");
+        return new DirectExchange("returnMedicalRecords");
     }
 
     @Bean
@@ -213,11 +213,89 @@ public class AmqpConfig {
     }
 
     @Bean
-    public Binding bindingGetIdByOwnerQueue(Queue getIdByOwnerQueue, Exchange getIdByOwnerExchange)
+    public Binding bindingGetIdByOwner(Queue getIdByOwnerQueue, Exchange getIdByOwnerExchange)
     {
         return BindingBuilder.bind(getIdByOwnerQueue)
                 .to(getIdByOwnerExchange)
                 .with("getIdByOwner")
+                .noargs();
+    }
+
+    @Bean
+    public Queue getRecordById2UpdateConsultationQueue() {
+        return new Queue("getRecordById2UpdateConsultation", false);
+    }
+
+    @Bean
+    public Exchange getRecordById2UpdateConsultationExchange()
+    {
+        return new DirectExchange("getRecordById2UpdateConsultation");
+    }
+
+    @Bean
+    public Binding bindingGetRecordById2UpdateConsultation(Queue getRecordById2UpdateConsultationQueue, Exchange getRecordById2UpdateConsultationExchange)
+    {
+        return BindingBuilder.bind(getRecordById2UpdateConsultationQueue)
+                .to(getRecordById2UpdateConsultationExchange)
+                .with("getRecordById2UpdateConsultation")
+                .noargs();
+    }
+    @Bean
+    public Queue returnMedicalRecord2UpdateConsultationQueue() {
+        return new Queue("returnMedicalRecord2UpdateConsultation", false);
+    }
+
+    @Bean
+    public Exchange returnMedicalRecord2UpdateConsultationExchange()
+    {
+        return new DirectExchange("returnMedicalRecord2UpdateConsultation");
+    }
+
+    @Bean
+    public Binding returnMedicalRecord2UpdateConsultation(Queue returnMedicalRecord2UpdateConsultationQueue, Exchange returnMedicalRecord2UpdateConsultationExchange)
+    {
+        return BindingBuilder.bind(returnMedicalRecord2UpdateConsultationQueue)
+                .to(returnMedicalRecord2UpdateConsultationExchange)
+                .with("returnMedicalRecord2UpdateConsultation")
+                .noargs();
+    }
+
+    @Bean
+    public Queue updateConsultationQueue() {
+        return new Queue("updateConsultation", false);
+    }
+
+    @Bean
+    public Exchange updateConsultationExchange()
+    {
+        return new DirectExchange("updateConsultation");
+    }
+
+    @Bean
+    public Binding bindingUpdateConsultation(Queue updateConsultationQueue, Exchange updateConsultationExchange)
+    {
+        return BindingBuilder.bind(updateConsultationQueue)
+                .to(updateConsultationExchange)
+                .with("updateConsultation")
+                .noargs();
+    }
+    @Bean
+    public Queue updateMedicineQueue() {
+        return new Queue("updateMedicine", false);
+    }
+
+    @Bean
+    public Exchange updateMedicineExchange()
+    {
+        return new DirectExchange("updateMedicine");
+    }
+
+    @Bean
+    public Binding bindingUpdateMedicine(Queue updateMedicineQueue, Exchange updateMedicineExchange)
+    {
+        return BindingBuilder.bind(updateMedicineQueue)
+                .to(updateMedicineExchange)
+                .with("updateMedicine")
                 .noargs();
     }
 

@@ -14,14 +14,20 @@ public class AmqpReceiver {
 
     public MedicalRecord medicalStore;
 
-    @RabbitListener(queues = "returnMedicalRecordQueue")
+    @RabbitListener(queues = "returnMedicalRecord")
     public void returnMedicalRecord(MedicalRecord medicalRecord){
         medicalStore = medicalRecord;
         orchestrationService.createPCM(medicalRecord);
     }
 
-    @RabbitListener(queues = "returnMedicalRecordsQueue")
+    @RabbitListener(queues = "returnMedicalRecords")
     public void returnMedicalRecords(List<MedicalRecord> medicalRecords){
         orchestrationService.saveReturnMedicalRecords(medicalRecords);
+    }
+
+    @RabbitListener(queues = "returnMedicalRecord2UpdateConsultation")
+    public void returnMedicalRecord2UpdateConsultation(MedicalRecord medicalRecord){
+        System.out.println("Receive data from returnMedicalRecord2UpdateConsultation.");
+        orchestrationService.updateConsultationByMedicalRecord(medicalRecord);
     }
 }

@@ -1,5 +1,6 @@
 package nl.nl0e0.orchestrationamqp.controller;
 
+import nl.nl0e0.petclinicentity.consultation.CheckConsultationDTO;
 import nl.nl0e0.petclinicentity.consultation.UpdateConsultationDTO;
 import nl.nl0e0.petclinicentity.owner.OwnerNameDTO;
 import nl.nl0e0.petclinicentity.appointment.CreateAppointmentDTO;
@@ -42,6 +43,11 @@ public class OrchestrationController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);
         }
     }
+    @GetMapping("/appointment/consultationByName/")
+    public ResponseEntity<?> checkConsultationByName(@RequestParam("firstname") String firstName, @RequestParam("lastName") String lastName){
+        orchestrationService.checkConsultationByName(firstName, lastName);
+        return  ResponseEntity.status(HttpStatus.OK).build();
+    }
 
     @PostMapping("/delete")
     public ResponseEntity<?> deleteAll(){
@@ -63,6 +69,12 @@ public class OrchestrationController {
         ownerNameDTO.setLastName(lastName);
         List<MedicalRecord> medicalRecords = orchestrationService.reGetAppointmentsByOwnerName(ownerNameDTO);
         return ResponseEntity.status(HttpStatus.OK).body(medicalRecords);
+    }
+    @PostMapping("/appointment/updateConsultation")
+    public ResponseEntity<?> updateConsultation(@RequestBody UpdateConsultationDTO updateConsultationDTO){
+        System.out.println("updateConsultationDTO Object in Controller\n" + updateConsultationDTO);
+        orchestrationService.updateConsultation(updateConsultationDTO);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 
 

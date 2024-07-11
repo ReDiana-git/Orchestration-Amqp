@@ -29,4 +29,8 @@ public class AppointmentService {
         medicalRecordRepository.deleteAll();
         appointmentRepository.deleteAll();
     }
+
+    public void getRecordById2UpdateConsultation(String recordId) {
+        amqpSender.returnMedicalRecord2UpdateConsultation(medicalRecordRepository.findById(recordId));
+    }
 }

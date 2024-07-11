@@ -1,6 +1,7 @@
 package nl.nl0e0.medicineamqp.service;
 
 import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
+import nl.nl0e0.petclinicentity.consultation.UpdateConsultationWithIdDTO;
 import nl.nl0e0.petclinicentity.medicine.MedicineEntity;
 import nl.nl0e0.medicineamqp.repository.MedicineRepositroy;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,5 +17,9 @@ public class MedicineService {
 
     public void deleteAll() {
         medicineRepositroy.deleteAll();
+    }
+
+    public void updateMedicine(UpdateConsultationWithIdDTO dto) {
+        medicineRepositroy.updateMedicines(dto.getMedicines(), dto.getMedicineId());
     }
 }

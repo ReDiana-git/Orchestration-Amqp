@@ -9,12 +9,14 @@ import org.springframework.stereotype.Component;
 public class AmqpReceiver {
     @Autowired
     PaymentService paymentService;
+    public MedicalRecord store;
 
-    @RabbitListener(queues = "createPaymentQueue")
+    @RabbitListener(queues = "createPayment")
     public void createPayment(MedicalRecord medicalRecord){
+        store = medicalRecord;
         paymentService.createAppointment(medicalRecord);
     }
-    @RabbitListener(queues = "deletePaymentQueue")
+    @RabbitListener(queues = "deletePayment")
     public void deletePayment(String string){
         if(string.equals("delete"))
             paymentService.deleteAll();

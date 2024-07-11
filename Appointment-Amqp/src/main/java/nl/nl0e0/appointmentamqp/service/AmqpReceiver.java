@@ -39,5 +39,10 @@ public class AmqpReceiver {
         List<MedicalRecord> medicalRecords = medicalRecordService.findByOwnerId(id);
         amqpSender.returnMedicalRecords(medicalRecords);
     }
+    @RabbitListener(queues = "getRecordById2UpdateConsultation")
+    public void getRecordById2UpdateConsultation(String recordId){
+        System.out.println("Receive data from getRecordById2UpdateConsultation.");
+        appointmentService.getRecordById2UpdateConsultation(recordId);
+    }
 
 }

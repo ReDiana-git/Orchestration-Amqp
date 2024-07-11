@@ -1,14 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.184 s <<< FAILURE! -- in nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest
-nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest.validate_createAppointmentContract -- Time elapsed: 0.017 s <<< ERROR!
-java.lang.IllegalStateException: Parsed JSON [{"id":"7a3b0695-dffb-443c-831b-ddc28503e040","ownerId":1,"vetId":1,"state":"init","petId":2,"appointmentId":"86dc5868-0042-4657-88d8-856593290ecd","consultationId":"41bbf199-17f9-485a-a8c4-9cfe1b2cfcb4","paymentId":"62a900e0-9169-486e-9855-4c5be4af9ed9","medicineId":"6637d2bc-3f17-4bd1-ba30-1f0e805a508f"}] doesn't match the JSON path [$[?(@.['appointmentDate'] == '2024-07-05T14:45:33.851107')]]
-	at com.toomuchcoding.jsonassert.JsonAsserter.check(JsonAsserter.java:228)
-	at com.toomuchcoding.jsonassert.JsonAsserter.checkBufferedJsonPathString(JsonAsserter.java:267)
-	at com.toomuchcoding.jsonassert.JsonAsserter.isEqualTo(JsonAsserter.java:101)
-	at nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest.validate_createAppointmentContract(ContractVerifierTest.java:39)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.02 s -- in nl.nl0e0.orchestrationamqp.contract.producer.ContractVerifierTest

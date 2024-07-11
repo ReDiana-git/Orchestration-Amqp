@@ -13,6 +13,7 @@ import java.util.List;
 public interface MedicalRecordRepository extends org.springframework.data.repository.Repository<MedicalRecord,String> {
     void save(MedicalRecord index);
     List<MedicalRecord> findByOwnerId(Integer ownerId);
+    MedicalRecord findById(String id);
     void deleteAll();
 
     @Modifying

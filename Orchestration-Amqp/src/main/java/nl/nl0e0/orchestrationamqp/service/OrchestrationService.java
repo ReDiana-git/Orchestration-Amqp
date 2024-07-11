@@ -2,6 +2,7 @@ package nl.nl0e0.orchestrationamqp.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import nl.nl0e0.petclinicentity.consultation.UpdateConsultationDTO;
+import nl.nl0e0.petclinicentity.consultation.UpdateConsultationWithIdDTO;
 import nl.nl0e0.petclinicentity.owner.OwnerNameDTO;
 import nl.nl0e0.petclinicentity.appointment.CreateAppointmentDTO;
 import nl.nl0e0.petclinicentity.appointment.MedicalRecord;
@@ -65,4 +66,21 @@ public class OrchestrationService {
         return medicalRecords;
     }
 
+    public void checkConsultationByName(String firstName, String lastName) {
+        Owner owner = ownerRepository.findByFullName(firstName, lastName);
+        amqpSender.findByOwnerId(owner.getId());
+    }
+
+    public void updateConsultation(UpdateConsultationDTO updateConsultationDTO) {
+        redisTemplate.opsForValue().set(updateConsultationDTO.getRecordId(),updateConsultationDTO);
+        amqpSender.findRecordById2UpdateConsultation(updateConsultationDTO.getRecordId());
+
+    }
+
+    public void updateConsultationByMedicalRecord(MedicalRecord medicalRecord) {
+        UpdateConsultationDTO updateConsultationDTO =(UpdateConsultationDTO) redisTemplate.opsForValue().getAndDelete(medicalRecord.getId());
+        UpdateConsultationWithIdDTO dto = new UpdateConsultationWithIdDTO(updateConsultationDTO, medicalRecord.getMedicineId(), medicalRecord.getConsultationId());
+        amqpSender.updateConsultation(dto);
+        amqpSender.updateMedicine(dto);
+    }
 }

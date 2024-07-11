@@ -11,11 +11,11 @@ outputMessage:
     ownerId: 1
     petId: 2
     vetId: 1
-    id: "NBNTZCNUAIABQOMXOGAI"
-    appointmentId: "ZHOLIXDRQTAYZEZMGIZB"
-    consultationId: "YNAJMLQYRPXGUJGQVPJF"
-    paymentId: "MPIRIOPHFBNVRYRPVEOL"
-    medicineId: "XCWETNLSAUTSHBNISWCW"
+    id: "YWMJLFJCITRTOTVJYGLY"
+    appointmentId: "OKYYLPCHDLJXRZHXEQJL"
+    consultationId: "ZFZREDLDOQTQHODGYYQD"
+    paymentId: "BJSEEZKHCWIHONZQQKGS"
+    medicineId: "WCDJAIIRPKRUXMHLSJOT"
   bodyFromFile: null
   bodyFromFileAsBytes: null
   assertThat: null
@@ -59,7 +59,7 @@ outputMessage:
     headers: []
     cookies: []
 description: "should send a message when event occurs"
-label: "send_message_to_medicine"
+label: "send_message_to_payment"
 name: "createPaymentContract"
 priority: null
 ignored: false

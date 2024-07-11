@@ -2,7 +2,7 @@ import org.springframework.cloud.contract.spec.Contract
 
 Contract.make {
     description "should send a message when event occurs"
-    label "send_message_to_medicine"
+    label "send_message_to_payment"
 
     input {
         triggeredBy("trigger1()")
