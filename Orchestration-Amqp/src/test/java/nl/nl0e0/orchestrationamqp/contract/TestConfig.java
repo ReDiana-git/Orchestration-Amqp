@@ -64,7 +64,9 @@ public class TestConfig{
     }
     @Bean
     RabbitMessageVerifier rabbitTemplateMessageVerifier() {
-        return new RabbitMessageVerifier();
+        RabbitMessageVerifier verifier = new RabbitMessageVerifier();
+        verifier.clearQueue();
+        return verifier;
     }
     @Bean
     ContractVerifierMessaging<Message> rabbitContractVerifierMessaging(RabbitMessageVerifier messageVerifier) {
@@ -125,5 +127,9 @@ class RabbitMessageVerifier implements MessageVerifierReceiver<Message> {
     @Override
     public Message receive(String destination, YamlContract contract) {
         return receive(destination, 1, TimeUnit.SECONDS, contract);
+    }
+    public void clearQueue() {
+        log.info("Clearing the queue");
+        queue.clear();
     }
 }

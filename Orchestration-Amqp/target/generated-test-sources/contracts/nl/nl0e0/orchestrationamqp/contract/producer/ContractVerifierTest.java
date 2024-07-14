@@ -22,6 +22,68 @@ public class ContractVerifierTest extends BaseClass {
 	@Inject ContractVerifierObjectMapper contractVerifierObjectMapper;
 
 	@Test
+	public void validate_createAppointmentContract() throws Exception {
+		// when:
+			trigger();
+
+		// then:
+			ContractVerifierMessage response = contractVerifierMessaging.receive("createAppointment",
+					contract(this, "createAppointmentContract.yml"));
+			assertThat(response).isNotNull();
+
+		// and:
+			DocumentContext parsedJson = JsonPath.parse(contractVerifierObjectMapper.writeValueAsString(response.getPayload()));
+			assertThatJson(parsedJson).field("['ownerId']").isEqualTo(1);
+			assertThatJson(parsedJson).field("['petId']").isEqualTo(2);
+			assertThatJson(parsedJson).field("['vetId']").isEqualTo(1);
+			assertThatJson(parsedJson).field("['appointmentDate']").isEqualTo("2024-07-05T14:45:33.851107");
+	}
+
+	@Test
+	public void validate_createConsultationContract() throws Exception {
+		// when:
+			trigger1();
+
+		// then:
+			ContractVerifierMessage response = contractVerifierMessaging.receive("createConsultation",
+					contract(this, "createConsultationContract.yml"));
+			assertThat(response).isNotNull();
+
+		// and:
+			DocumentContext parsedJson = JsonPath.parse(contractVerifierObjectMapper.writeValueAsString(response.getPayload()));
+			assertThatJson(parsedJson).field("['ownerId']").isEqualTo(1);
+			assertThatJson(parsedJson).field("['petId']").isEqualTo(2);
+			assertThatJson(parsedJson).field("['vetId']").isEqualTo(1);
+			assertThatJson(parsedJson).field("['id']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['appointmentId']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['consultationId']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['paymentId']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['medicineId']").matches("^\\s*\\S[\\S\\s]*");
+	}
+
+	@Test
+	public void validate_createMedicineContract() throws Exception {
+		// when:
+			trigger1();
+
+		// then:
+			ContractVerifierMessage response = contractVerifierMessaging.receive("createMedicine",
+					contract(this, "createMedicineContract.yml"));
+			assertThat(response).isNotNull();
+
+		// and:
+			DocumentContext parsedJson = JsonPath.parse(contractVerifierObjectMapper.writeValueAsString(response.getPayload()));
+			assertThatJson(parsedJson).field("['ownerId']").isEqualTo(1);
+			assertThatJson(parsedJson).field("['petId']").isEqualTo(2);
+			assertThatJson(parsedJson).field("['vetId']").isEqualTo(1);
+			assertThatJson(parsedJson).field("['id']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['appointmentId']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['consultationId']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['paymentId']").matches("^\\s*\\S[\\S\\s]*");
+			assertThatJson(parsedJson).field("['medicineId']").matches("^\\s*\\S[\\S\\s]*");
+	}
+
+	@Test
 	public void validate_createPaymentContract() throws Exception {
 		// when:
 			trigger1();
